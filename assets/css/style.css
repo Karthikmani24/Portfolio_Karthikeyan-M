@@ -898,3 +898,90 @@ body:not(.light-mode):after{
 
 @media(max-width:650px){.console-body{grid-template-columns:1fr}.radar{margin:auto}}
 @media(prefers-reduced-motion:reduce){.radar-node,.radar-core,.cyber-grid:after{animation:none!important}}
+
+/* =========================================================
+   V9 FINAL — RECRUITER CHANNELS / VIBRANT CYBER CARDS
+   Burgundy × Red × Copper × Black
+   ========================================================= */
+
+.recruiter-v9-panel{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 8% 10%,rgba(166,61,99,.20),transparent 30%),
+    radial-gradient(circle at 92% 90%,rgba(217,160,102,.12),transparent 28%),
+    linear-gradient(145deg,#12080d 0%,#080609 58%,#160a10 100%);
+  border:1px solid rgba(217,160,102,.24);
+  box-shadow:0 24px 70px rgba(0,0,0,.48),inset 0 1px 0 rgba(255,255,255,.035);
+}
+.recruiter-v9-panel:before{
+  content:"";position:absolute;inset:-40%;pointer-events:none;
+  background:conic-gradient(from 0deg,transparent 0deg,rgba(217,160,102,.08) 45deg,transparent 90deg,rgba(166,61,99,.08) 180deg,transparent 230deg);
+  animation:recruiterAmbientV9 18s linear infinite;
+}
+@keyframes recruiterAmbientV9{to{transform:rotate(360deg)}}
+.recruiter-v9-head{position:relative;z-index:2}
+.recruiter-v9-head small{color:#D9A066;text-shadow:0 0 14px rgba(217,160,102,.25)}
+.recruiter-v9-head h3{color:#F8F1EA}
+.recruiter-v9-live{color:#D9A066;background:rgba(217,160,102,.08);border-color:rgba(217,160,102,.25);box-shadow:inset 0 0 18px rgba(217,160,102,.04)}
+.recruiter-tabs-v9{position:relative;z-index:2}
+.recruiter-tab-v9{
+  overflow:hidden;min-height:68px;
+  background:linear-gradient(135deg,rgba(28,12,19,.96),rgba(8,8,11,.96));
+  border:1px solid rgba(217,160,102,.16);
+  box-shadow:0 12px 28px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.025);
+}
+.recruiter-tab-v9:nth-child(1){background:linear-gradient(135deg,rgba(91,35,57,.96),rgba(12,9,12,.98));border-color:rgba(217,160,102,.34)}
+.recruiter-tab-v9:nth-child(2){background:linear-gradient(135deg,rgba(122,24,59,.88),rgba(14,9,13,.98));border-color:rgba(166,61,99,.34)}
+.recruiter-tab-v9:nth-child(3){background:linear-gradient(135deg,rgba(128,65,35,.82),rgba(12,9,10,.98));border-color:rgba(217,160,102,.30)}
+.recruiter-tab-v9:nth-child(4){background:linear-gradient(135deg,rgba(69,39,49,.96),rgba(8,8,11,.98));border-color:rgba(180,88,112,.30)}
+.recruiter-tab-v9:nth-child(5){background:linear-gradient(135deg,rgba(83,28,45,.92),rgba(9,8,10,.98));border-color:rgba(217,160,102,.22)}
+.recruiter-tab-v9:nth-child(6){background:linear-gradient(135deg,rgba(113,50,71,.86),rgba(11,9,11,.98));border-color:rgba(217,160,102,.27)}
+.recruiter-tab-v9:nth-child(7){background:linear-gradient(135deg,rgba(101,37,50,.90),rgba(8,8,10,.98));border-color:rgba(255,64,95,.24)}
+.recruiter-tab-v9:hover,.recruiter-tab-v9.active{
+  transform:translateY(-6px) scale(1.01);
+  background:linear-gradient(135deg,rgba(166,61,99,.42),rgba(217,160,102,.10) 55%,rgba(5,5,7,.98));
+  border-color:rgba(217,160,102,.52);
+  box-shadow:0 20px 42px rgba(0,0,0,.42),0 0 28px rgba(166,61,99,.13);
+}
+.recruiter-tab-v9 b{color:#F8F1EA;font-size:10px;letter-spacing:.01em}
+.recruiter-tab-v9 small{color:#C9B8AE;opacity:.9}
+.profile-logo{
+  position:relative;overflow:hidden;
+  background:linear-gradient(135deg,#7A183B 0%,#D9A066 52%,#276FBF 100%);
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 8px 20px rgba(0,0,0,.30),0 0 18px rgba(217,160,102,.10);
+}
+.profile-logo:after{
+  content:"";position:absolute;inset:-40% -80%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.24),transparent);
+  transform:translateX(-100%) rotate(18deg);
+}
+.recruiter-tab-v9:hover .profile-logo:after,.recruiter-tab-v9.active .profile-logo:after{animation:recruiterLogoSweepV9 1.1s ease}
+@keyframes recruiterLogoSweepV9{to{transform:translateX(100%) rotate(18deg)}}
+.recruiter-preview-v9{
+  position:relative;z-index:2;
+  background:radial-gradient(circle at 0% 50%,rgba(166,61,99,.18),transparent 28%),linear-gradient(135deg,rgba(34,14,22,.97),rgba(7,7,9,.98));
+  border-color:rgba(217,160,102,.22);
+  box-shadow:0 18px 45px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.025);
+}
+.recruiter-preview-v9 h4{color:#F8F1EA}
+.recruiter-preview-v9 p{color:#C9B8AE}
+.recruiter-preview-v9 small{color:#D9A066}
+.preview-pulse{background:#FF405F;box-shadow:0 0 0 0 rgba(255,64,95,.35)}
+.recruiter-preview-v9 .secondary{
+  background:linear-gradient(135deg,#7A183B,#D9A066);
+  color:#12070A;border-color:transparent;box-shadow:0 10px 24px rgba(166,61,99,.22);
+}
+.profile-note{position:relative;z-index:2;color:#9D8D85}
+.profile-note i{color:#D9A066}
+.recruiter-v9-panel:after{
+  content:"";position:absolute;left:-20%;top:0;width:20%;height:100%;
+  pointer-events:none;background:linear-gradient(90deg,transparent,rgba(217,160,102,.045),transparent);
+  transform:skewX(-18deg);animation:recruiterPanelScanV9 7s ease-in-out infinite;
+}
+@keyframes recruiterPanelScanV9{0%,35%{left:-25%}65%,100%{left:110%}}
+@media(prefers-reduced-motion:reduce){
+  .recruiter-v9-panel:before,.recruiter-v9-panel:after,
+  .recruiter-tab-v9:hover .profile-logo:after,.recruiter-tab-v9.active .profile-logo:after{animation:none}
+}
