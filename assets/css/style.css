@@ -985,3 +985,541 @@ body:not(.light-mode):after{
   .recruiter-v9-panel:before,.recruiter-v9-panel:after,
   .recruiter-tab-v9:hover .profile-logo:after,.recruiter-tab-v9.active .profile-logo:after{animation:none}
 }
+
+
+/* =========================================================
+   V9 FINAL VISUAL — PURPLE × BLUE CYBER COMMAND
+   Mobile-safe motion policy:
+   touch/mobile devices receive ZERO decorative animation.
+   ========================================================= */
+
+:root{
+  --bg:#080712;
+  --bg-deep:#03040a;
+  --panel:rgba(12,10,25,.90);
+  --panel-2:rgba(22,17,42,.94);
+  --line:rgba(112,170,255,.20);
+  --text:#F7F5FF;
+  --muted:#B9B8CF;
+  --accent:#9B7CFF;
+  --accent-2:#4AA8FF;
+  --burgundy:#6B2B78;
+  --burgundy-2:#A946B8;
+  --good:#7BE6B2;
+  --red:#FF4F88;
+  --shadow:0 25px 70px rgba(0,0,0,.52);
+}
+
+/* Vibrant purple/blue background */
+body,
+body.light-mode{
+  color:var(--text);
+  background:
+    radial-gradient(circle at 8% 12%,rgba(153,76,255,.30),transparent 25%),
+    radial-gradient(circle at 88% 16%,rgba(43,142,255,.24),transparent 28%),
+    radial-gradient(circle at 52% 78%,rgba(102,43,168,.22),transparent 30%),
+    radial-gradient(circle at 18% 90%,rgba(34,89,196,.16),transparent 26%),
+    linear-gradient(135deg,#03040A 0%,#0A0715 34%,#12082A 66%,#050A18 100%);
+}
+
+/* Static cyber grid */
+.cyber-grid{
+  opacity:.42;
+  background:
+    linear-gradient(rgba(129,150,255,.055) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(129,150,255,.055) 1px,transparent 1px);
+  background-size:52px 52px;
+}
+.cyber-grid:after{
+  background:
+    radial-gradient(circle at 15% 25%,rgba(155,124,255,.18),transparent 23%),
+    radial-gradient(circle at 82% 20%,rgba(74,168,255,.16),transparent 22%),
+    radial-gradient(circle at 55% 80%,rgba(169,70,184,.16),transparent 28%);
+}
+
+/* Keep decorative orbs vibrant on desktop */
+.orb-a{
+  background:radial-gradient(circle,rgba(155,124,255,.62),transparent 68%);
+}
+.orb-b{
+  background:radial-gradient(circle,rgba(74,168,255,.55),transparent 68%);
+}
+
+.site-header{
+  background:rgba(4,5,13,.84);
+  border-bottom-color:rgba(112,170,255,.15);
+}
+.brand-mark{
+  border-color:var(--accent);
+  box-shadow:0 0 25px rgba(155,124,255,.20);
+}
+.nav-links a:hover,
+.nav-links a.active{
+  background:rgba(155,124,255,.10);
+}
+
+.hero-console{
+  background:
+    radial-gradient(circle at 12% 18%,rgba(155,124,255,.16),transparent 28%),
+    radial-gradient(circle at 90% 82%,rgba(74,168,255,.13),transparent 28%),
+    linear-gradient(145deg,rgba(28,17,52,.94),rgba(5,7,16,.97));
+  border-color:rgba(112,170,255,.22);
+}
+.eyebrow{
+  border-color:rgba(155,124,255,.24);
+  background:rgba(155,124,255,.06);
+}
+h1 span,.section-heading small,.hero-meta i,.stats strong,
+.skill-card i,.project-icon,.radar-center,.console-top b{
+  color:var(--accent);
+}
+.primary{
+  background:linear-gradient(135deg,#8B63FF,#4AA8FF);
+  color:#05050b;
+  box-shadow:0 14px 35px rgba(74,168,255,.18);
+}
+.secondary,.ghost{
+  border-color:rgba(112,170,255,.22);
+  background:rgba(74,168,255,.05);
+}
+.radar{
+  border-color:rgba(112,170,255,.40);
+  background:radial-gradient(circle,rgba(74,168,255,.10),rgba(32,17,70,.08) 45%,transparent 70%);
+}
+.radar:before,.radar:after,.radar-ring{
+  border-color:rgba(112,170,255,.20);
+}
+.radar-sweep{
+  background:linear-gradient(90deg,rgba(74,168,255,.92),rgba(155,124,255,.45),transparent);
+}
+.radar-label{
+  color:#8CCBFF;
+}
+.radar-core{
+  background:radial-gradient(circle,rgba(116,65,190,.40),rgba(6,7,15,.96));
+  border-color:rgba(155,124,255,.50);
+  box-shadow:0 0 28px rgba(74,168,255,.18),inset 0 0 18px rgba(155,124,255,.10);
+}
+.radar-core strong{color:#BDAEFF}
+.radar-node{
+  background:#FF4F88;
+  box-shadow:0 0 8px #FF4F88,0 0 18px rgba(255,79,136,.55);
+}
+
+.glass,
+.contact-card,
+.forum-callout,
+.skill-card,
+.project-card,
+.cert-card,
+.forum-card,
+.timeline article{
+  background:
+    linear-gradient(145deg,rgba(27,18,52,.90),rgba(6,8,17,.95));
+  border-color:rgba(112,170,255,.17);
+}
+.skill-card:hover,.project-card:hover,.cert-card:hover,.forum-card:hover,
+.timeline article:hover{
+  border-color:rgba(155,124,255,.38);
+  box-shadow:0 22px 55px rgba(0,0,0,.46),0 0 28px rgba(74,168,255,.08);
+}
+.timeline-dot{
+  background:var(--accent-2);
+  box-shadow:0 0 16px rgba(74,168,255,.55);
+}
+.tags span{
+  border-color:rgba(112,170,255,.20);
+  color:#B8CFFF;
+}
+.telemetry{
+  background:linear-gradient(145deg,rgba(21,15,43,.90),rgba(5,7,15,.96));
+  border-color:rgba(112,170,255,.18);
+}
+.bar i{
+  background:linear-gradient(90deg,#6B2B78,#9B7CFF,#4AA8FF);
+}
+
+/* Recruiter panel */
+.recruiter-v9-panel{
+  background:
+    radial-gradient(circle at 8% 10%,rgba(155,124,255,.18),transparent 30%),
+    radial-gradient(circle at 92% 90%,rgba(74,168,255,.14),transparent 28%),
+    linear-gradient(145deg,#130C27 0%,#070811 60%,#0C1630 100%);
+  border-color:rgba(112,170,255,.25);
+}
+.recruiter-tab-v9,
+.recruiter-tab-v9:nth-child(n){
+  background:linear-gradient(135deg,rgba(28,18,55,.97),rgba(5,7,15,.98));
+  border-color:rgba(112,170,255,.18);
+}
+.recruiter-tab-v9:nth-child(1){background:linear-gradient(135deg,rgba(66,44,128,.92),rgba(8,9,18,.98))}
+.recruiter-tab-v9:nth-child(2){background:linear-gradient(135deg,rgba(75,42,112,.92),rgba(7,9,17,.98))}
+.recruiter-tab-v9:nth-child(3){background:linear-gradient(135deg,rgba(45,75,145,.92),rgba(7,9,17,.98))}
+.recruiter-tab-v9:nth-child(4){background:linear-gradient(135deg,rgba(37,76,139,.90),rgba(7,9,17,.98))}
+.recruiter-tab-v9:nth-child(5){background:linear-gradient(135deg,rgba(64,46,126,.92),rgba(7,8,16,.98))}
+.recruiter-tab-v9:nth-child(6){background:linear-gradient(135deg,rgba(86,46,139,.92),rgba(7,8,16,.98))}
+.recruiter-tab-v9:nth-child(7){background:linear-gradient(135deg,rgba(39,73,137,.92),rgba(7,8,16,.98))}
+.recruiter-tab-v9:hover,
+.recruiter-tab-v9.active{
+  background:linear-gradient(135deg,rgba(105,72,196,.45),rgba(52,137,236,.14),rgba(5,7,15,.98));
+  border-color:rgba(155,124,255,.55);
+  box-shadow:0 20px 42px rgba(0,0,0,.42),0 0 28px rgba(74,168,255,.12);
+}
+.profile-logo{
+  background:linear-gradient(135deg,#6844B8 0%,#4AA8FF 100%);
+  color:#fff;
+  border-color:rgba(255,255,255,.18);
+}
+.recruiter-preview-v9{
+  background:
+    radial-gradient(circle at 0% 50%,rgba(155,124,255,.16),transparent 30%),
+    linear-gradient(135deg,rgba(26,17,51,.98),rgba(5,7,14,.99));
+  border-color:rgba(112,170,255,.24);
+}
+.recruiter-preview-v9 .secondary{
+  background:linear-gradient(135deg,#7B5BEA,#4AA8FF);
+  color:#05050b;
+  border-color:transparent;
+}
+.recruiter-v9-live{
+  color:#8CCBFF;
+  background:rgba(74,168,255,.07);
+  border-color:rgba(74,168,255,.24);
+}
+
+/* Header KM / buddy */
+.km-logo{color:#BDAEFF}
+.v9-cyber-buddy{
+  filter:drop-shadow(0 12px 25px rgba(74,168,255,.22));
+}
+
+/* =========================================================
+   MOBILE / TOUCH — NO ANIMATION, NO FLICKER
+   ========================================================= */
+@media (hover:none) and (pointer:coarse), (max-width:767px){
+  html{scroll-behavior:auto}
+
+  *,
+  *::before,
+  *::after{
+    animation:none !important;
+    animation-delay:0 !important;
+    animation-duration:0s !important;
+    animation-iteration-count:1 !important;
+    transition:none !important;
+    scroll-behavior:auto !important;
+  }
+
+  .scan-line,
+  .cursor-glow,
+  .v9-cyber-buddy,
+  .ambient-field,
+  .orb{
+    display:none !important;
+  }
+
+  .cyber-grid:after{
+    display:none !important;
+  }
+
+  .reveal-on-scroll,
+  .reveal-on-scroll.is-visible{
+    opacity:1 !important;
+    transform:none !important;
+  }
+
+  .primary:hover,
+  .secondary:hover,
+  .ghost:hover,
+  .skill-card:hover,
+  .project-card:hover,
+  .cert-card:hover,
+  .forum-card:hover,
+  .timeline article:hover,
+  .career-card:hover,
+  .recruiter-tab-v9:hover{
+    transform:none !important;
+  }
+
+  .radar-sweep,
+  .radar-node,
+  .radar-core{
+    animation:none !important;
+  }
+
+  .radar-sweep{
+    opacity:.75;
+  }
+
+  .recruiter-v9-panel::before,
+  .recruiter-v9-panel::after,
+  .recruiter-tab-v9 .profile-logo::after{
+    display:none !important;
+  }
+
+  .recruiter-tab-v9,
+  .recruiter-tab-v9.active{
+    transform:none !important;
+  }
+
+  .private-contact{
+    animation:none !important;
+  }
+
+  .bar i{
+    transition:none !important;
+  }
+}
+
+
+/* =========================================================
+   V10 MOBILE UI REBUILD — CREDENTIALS + RECRUITER CHANNELS
+   Purple × Blue | Mobile-first | No touch animation
+   ========================================================= */
+
+/* Credentials: prevent long titles from overflowing or becoming cramped. */
+.v10-credentials-fix .cert-card,
+.v9-credentials .cert-card{
+  min-width:0;
+  overflow:hidden;
+  align-items:center;
+}
+.v9-credentials .cert-card > div:last-child{
+  min-width:0;
+}
+.v9-credentials .cert-card h3{
+  max-width:100%;
+  overflow-wrap:anywhere;
+  word-break:normal;
+  line-height:1.25;
+}
+.v9-credentials .cert-card p{
+  overflow-wrap:anywhere;
+}
+.v9-credentials .cert-icon{
+  flex:0 0 52px;
+}
+
+/* Recruiter channels: clear card anatomy and predictable wrapping. */
+.recruiter-v9-panel{
+  min-width:0;
+}
+.recruiter-tabs-v9{
+  min-width:0;
+}
+.recruiter-tab-v9{
+  min-width:0;
+  overflow:hidden;
+}
+.recruiter-tab-v9 b,
+.recruiter-tab-v9 small{
+  min-width:0;
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+.recruiter-preview-v9 > div:nth-child(2){
+  min-width:0;
+}
+.recruiter-preview-v9 p{
+  overflow-wrap:anywhere;
+}
+
+@media (min-width:768px) and (max-width:1100px){
+  .v9-cert-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .recruiter-tabs-v9{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width:767px){
+  /* Credentials become full-width, readable cards. */
+  .v9-credentials{
+    padding-left:14px;
+    padding-right:14px;
+  }
+  .v9-credentials .section-heading h2{
+    font-size:clamp(24px,7vw,31px);
+    line-height:1.08;
+  }
+  .credential-command-v9{
+    width:100%;
+    gap:8px;
+    padding:12px 14px;
+  }
+  .credential-command-v9 span,
+  .credential-command-v9 b{
+    line-height:1.35;
+  }
+  .v9-cert-grid{
+    grid-template-columns:1fr !important;
+    gap:10px;
+  }
+  .v9-credentials .cert-card{
+    display:grid;
+    grid-template-columns:48px minmax(0,1fr);
+    gap:12px;
+    width:100%;
+    min-height:76px;
+    padding:13px;
+    border-radius:16px;
+  }
+  .v9-credentials .cert-icon{
+    width:48px;
+    height:48px;
+    min-width:48px;
+    border-radius:13px;
+    font-size:19px;
+  }
+  .v9-credentials .cert-card span{
+    display:block;
+    font-size:7.5px;
+    letter-spacing:.13em;
+    line-height:1.3;
+  }
+  .v9-credentials .cert-card h3{
+    margin:3px 0 2px;
+    font-size:13.5px;
+    line-height:1.28;
+  }
+  .v9-credentials .cert-card p{
+    font-size:9.5px;
+    line-height:1.25;
+  }
+
+  /* Recruiter panel is intentionally vertical on phones. */
+  .v9-career{
+    padding-left:14px;
+    padding-right:14px;
+  }
+  .recruiter-v9-panel{
+    padding:14px;
+    border-radius:20px;
+  }
+  .recruiter-v9-head{
+    width:100%;
+    gap:10px;
+  }
+  .recruiter-v9-head h3{
+    font-size:22px;
+    line-height:1.1;
+  }
+  .recruiter-v9-live{
+    align-self:flex-start;
+    white-space:normal;
+    font-size:8px;
+    line-height:1.3;
+    padding:7px 9px;
+  }
+  .recruiter-tabs-v9{
+    grid-template-columns:1fr !important;
+    gap:9px;
+  }
+  .recruiter-tab-v9,
+  .recruiter-tab-v9:nth-child(n){
+    display:grid;
+    grid-template-columns:44px minmax(0,1fr);
+    grid-template-rows:auto auto;
+    column-gap:11px;
+    align-items:center;
+    width:100%;
+    min-height:66px;
+    padding:11px;
+    border-radius:15px;
+    transform:none !important;
+  }
+  .recruiter-tab-v9 .profile-logo{
+    grid-column:1;
+    grid-row:1 / 3;
+    width:44px;
+    height:44px;
+    min-width:44px;
+    border-radius:12px;
+    font-size:13px;
+  }
+  .recruiter-tab-v9 b{
+    grid-column:2;
+    grid-row:1;
+    font-size:11px;
+    line-height:1.25;
+  }
+  .recruiter-tab-v9 small{
+    grid-column:2;
+    grid-row:2;
+    font-size:9px;
+    line-height:1.3;
+    color:#B7B6D0;
+  }
+  .recruiter-preview-v9{
+    display:grid;
+    grid-template-columns:10px minmax(0,1fr);
+    gap:8px 10px;
+    align-items:start;
+    width:100%;
+    margin-top:11px;
+    padding:13px;
+    border-radius:15px;
+  }
+  .recruiter-preview-v9 .preview-pulse{
+    grid-column:1;
+    grid-row:1;
+    margin-top:4px;
+  }
+  .recruiter-preview-v9 > div:nth-child(2){
+    grid-column:2;
+    grid-row:1;
+  }
+  .recruiter-preview-v9 h4{
+    font-size:15px;
+    line-height:1.2;
+  }
+  .recruiter-preview-v9 p{
+    font-size:10px;
+    line-height:1.4;
+  }
+  .recruiter-preview-v9 .secondary{
+    grid-column:1 / -1;
+    grid-row:2;
+    width:100%;
+    min-height:42px;
+    justify-content:center;
+    text-align:center;
+    display:flex;
+    align-items:center;
+  }
+
+  /* Remove hover-only visual states on touch devices. */
+  .recruiter-tab-v9:hover,
+  .recruiter-tab-v9.active{
+    transform:none !important;
+    box-shadow:0 10px 24px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.025);
+  }
+}
+
+@media (max-width:390px){
+  .v9-credentials .cert-card{
+    grid-template-columns:44px minmax(0,1fr);
+    padding:11px;
+    gap:10px;
+  }
+  .v9-credentials .cert-icon{
+    width:44px;
+    height:44px;
+    min-width:44px;
+    font-size:17px;
+  }
+  .v9-credentials .cert-card h3{font-size:12.8px}
+  .recruiter-v9-panel{padding:12px}
+  .recruiter-tab-v9{padding:10px}
+  .recruiter-tab-v9 .profile-logo{width:42px;height:42px;min-width:42px}
+}
+
+/* V10 version label / no-motion mobile policy. */
+@media (hover:none) and (pointer:coarse), (max-width:767px){
+  .v9-credentials .cert-card,
+  .recruiter-tab-v9,
+  .recruiter-preview-v9{
+    transition:none !important;
+  }
+}
