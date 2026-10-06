@@ -1,3 +1,5 @@
+const isTouchDevice = window.matchMedia("(hover:none) and (pointer:coarse)").matches || window.innerWidth <= 767;
+
 const navToggle = document.getElementById("navToggle");
 const navLinks = document.getElementById("navLinks");
 
@@ -25,8 +27,8 @@ const privateContact = document.getElementById("privateContact");
 
 if (reveal && privateContact) {
   reveal.addEventListener("click", () => {
-    const email = ["karthimichel@gmail.com"].join("");
-    const phone = ["+91-9941875820"].join("");
+    const email = ["YOUR_EMAIL_HERE"].join("");
+    const phone = ["YOUR_PHONE_HERE"].join("");
 
     const emailLink = document.getElementById("emailLink");
     const phoneLink = document.getElementById("phoneLink");
@@ -44,7 +46,7 @@ if (reveal && privateContact) {
 
 /* Rotating SOC/GRC status text — visual only, not a live monitoring feed. */
 const status = document.querySelector("[data-security-status]");
-if (status) {
+if (status && !isTouchDevice) {
   const states = [
     "SOC STATUS: ONLINE",
     "GRC STATUS: ACTIVE",
@@ -59,13 +61,13 @@ if (status) {
 }
 
 const PROFILE_URLS={
-  linkedin:"https://www.linkedin.com/in/karthikeyan-m-baa509b0/",
-  bayt:"https://www.bayt.com/en/jobseeker/my-account/?_gl=1*za9pd3*_up*MQ..*_ga*MTkxOTQwMTkzNS4xNzkwNjc2OTEz*_ga_1NKPLGNKKD*czE3OTA2NzY5MTMkbzEkZzAkdDE3OTA2NzY5MTMkajYwJGwwJGgw",
-  gulftalent:"https://www.gulftalent.com/candidates/edit-cv?isFromFreeCV=0",
-  naukri:"https://www.naukri.com/mnjuser/profile?id=&altresid",
-  naukrigulf:"https://www.naukrigulf.com/mnj/userProfile/myHome",
-  gulfcareers:"https://gulfcareers.com/portal/dashboard",
-  gulfjobs:"https://www.gulfjobs.com/home"
+  linkedin:"https://www.linkedin.com/",
+  bayt:"https://www.bayt.com/",
+  gulftalent:"https://www.gulftalent.com/",
+  naukri:"https://www.naukri.com/",
+  naukrigulf:"https://www.naukrigulf.com/",
+  gulfcareers:"https://gulfcareers.com/",
+  gulfjobs:"https://www.gulfjobs.com/"
 };
 document.querySelectorAll("[data-profile]").forEach(a=>{const k=a.dataset.profile;if(PROFILE_URLS[k])a.href=PROFILE_URLS[k]});
 
@@ -93,13 +95,13 @@ if(preview&&previewLink){
 const progress=document.getElementById("scrollProgress"),backTop=document.getElementById("backTop");
 const scrollUI=()=>{const m=document.documentElement.scrollHeight-innerHeight;if(progress)progress.style.width=(m?(scrollY/m)*100:0)+"%";if(backTop)backTop.style.opacity=scrollY>500?"1":".45"};addEventListener("scroll",scrollUI,{passive:true});scrollUI();backTop?.addEventListener("click",()=>scrollTo({top:0,behavior:"smooth"}));
 const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("is-visible");observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll(".skill-card,.project-card,.cert-card,.career-card,.timeline article,.glass,.signal-list>div").forEach(e=>{e.classList.add("reveal-on-scroll");observer.observe(e)});
-const tel=document.querySelector(".telemetry");if(tel){const o=new IntersectionObserver(es=>{if(!es[0].isIntersecting)return;tel.querySelectorAll(".bar i").forEach(b=>b.style.width=getComputedStyle(b).getPropertyValue("--value"));tel.querySelectorAll("[data-counter]").forEach(c=>{const t=+c.dataset.counter;let v=0;const z=setInterval(()=>{v+=Math.ceil(t/30);if(v>=t){v=t;clearInterval(z)}c.textContent=v+"%"},30)});o.disconnect()},{threshold:.25});o.observe(tel)}
+const tel=document.querySelector(".telemetry");if(tel){const o=new IntersectionObserver(es=>{if(!es[0].isIntersecting)return;tel.querySelectorAll(".bar i").forEach(b=>b.style.width=getComputedStyle(b).getPropertyValue("--value"));tel.querySelectorAll("[data-counter]").forEach(c=>{const t=+c.dataset.counter;if(isTouchDevice){c.textContent=t+"%";return;}let v=0;const z=setInterval(()=>{v+=Math.ceil(t/30);if(v>=t){v=t;clearInterval(z)}c.textContent=v+"%"},30)});o.disconnect()},{threshold:.25});o.observe(tel)}
 const glow=document.getElementById("cursorGlow");if(glow&&matchMedia("(pointer:fine)").matches)addEventListener("pointermove",e=>{glow.style.opacity=".9";glow.style.left=e.clientX+"px";glow.style.top=e.clientY+"px"});
 const theme=document.getElementById("themeToggle");if(theme){if(localStorage.getItem("km-theme")==="light")document.body.classList.add("light-mode");const icon=()=>theme.innerHTML=document.body.classList.contains("light-mode")?'<i class="fa-solid fa-sun"></i>':'<i class="fa-solid fa-moon"></i>';icon();theme.addEventListener("click",()=>{document.body.classList.toggle("light-mode");localStorage.setItem("km-theme",document.body.classList.contains("light-mode")?"light":"dark");icon()})}
 
 
 /* V5 motion layer: subtle pointer tilt for capability/work/credential cards. */
-if (matchMedia("(pointer:fine)").matches) {
+if (!isTouchDevice && matchMedia("(pointer:fine)").matches) {
   document.querySelectorAll(".capability-card,.work-card,.credential-card").forEach(card => {
     card.addEventListener("pointermove", e => {
       const r = card.getBoundingClientRect();
@@ -133,7 +135,7 @@ if (careerHub) {
 }
 
 /* V5-2 ambient security field pointer parallax */
-if (matchMedia("(pointer:fine)").matches) {
+if (!isTouchDevice && matchMedia("(pointer:fine)").matches) {
   const ambient = document.querySelector(".ambient-field");
   if (ambient) window.addEventListener("pointermove", e => {
     const x=(e.clientX/innerWidth-.5), y=(e.clientY/innerHeight-.5);
@@ -146,7 +148,7 @@ if (matchMedia("(pointer:fine)").matches) {
    V7 interaction layer — professional/fun profile animation
    ============================================================ */
 const funAnim = document.querySelector('.fun-security-animation');
-if (funAnim) {
+if (funAnim && !isTouchDevice) {
   const messages = [
     'Exception detected…',
     'KM bot chasing risk…',
@@ -172,7 +174,7 @@ document.querySelectorAll('.capability-card,.work-card').forEach(card => {
 
 /* V9 fresh interaction layer — playful cyber ambience, recruiter tabs and richer section motion. */
 (()=>{
- const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches || isTouchDevice;
  const buddy=document.querySelector('.v9-cyber-buddy');
  if(buddy&&!reduce){
    const lines=['risk spotted!','control verified ✓','audit mode: ON','KM bot: scanning…','back to GRC!'];
@@ -183,3 +185,13 @@ document.querySelectorAll('.capability-card,.work-card').forEach(card => {
    const io=new IntersectionObserver(es=>{if(es[0].isIntersecting){section.classList.add('section-live-v9');io.disconnect()}},{threshold:.15}); io.observe(section);
  });
 })();
+
+
+/* V9 MOBILE SAFETY — no motion handlers on touch/mobile. */
+if (isTouchDevice) {
+  document.querySelectorAll('.capability-card,.work-card,.credential-card').forEach(card => {
+    card.style.transform = 'none';
+    card.onpointermove = null;
+    card.onpointerleave = null;
+  });
+}
