@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Karthikeyan M — Cybersecurity, GRC, information security, compliance, risk and security operations portfolio.">
-<meta name="theme-color" content="#090B1D">
-<title>Karthikeyan M | Cybersecurity • GRC • Security Operations | V11</title>
+<meta name="theme-color" content="#090B1D"><link rel="canonical" href="https://karthikmani24.github.io/Portfolio_Karthikeyan-M/">
+<title>Karthikeyan M | Cybersecurity • GRC • Security Operations | V11.1</title>
 <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="./assets/icons/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -20,20 +20,22 @@
 <div class="v11-particles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
 
 <header class="v11-top">
-  <a class="v11-brand" href="#top"><span>KM</span><b>KARTHIKEYAN M</b><small>CYBERSECURITY • GRC • SECURITY OPERATIONS</small></a>
+  <a class="v11-brand" href="#about" data-page-link="about"><span>KM</span><b>KARTHIKEYAN M</b><small>CYBERSECURITY • GRC • SECURITY OPERATIONS</small></a>
   <button id="v11Menu" class="v11-menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
-  <nav id="v11Nav">
-    <a href="#about">About</a>
-    <a href="#resume">Resume</a>
-    <a href="#skills">Skills</a>
-    <a href="#credentials">Credentials</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-    <a href="forum.html"><i class="fa-solid fa-comments"></i> Forum</a>
+  <nav id="v11Nav" aria-label="Primary navigation">
+    <a href="#about" data-page-link="about">About</a>
+    <a href="#resume" data-page-link="resume">Resume</a>
+    <a href="#skills" data-page-link="skills">Skills</a>
+    <a href="#credentials" data-page-link="credentials">Credentials</a>
+    <a href="#projects" data-page-link="projects">Projects</a>
+    <a href="#recruiters" data-page-link="recruiters"><i class="fa-solid fa-user-tie"></i> Recruiter Connect</a>
+    <a href="#forum" data-page-link="forum"><i class="fa-solid fa-comments"></i> Forum</a>
+    <a href="#contact" data-page-link="contact">Contact</a>
   </nav>
 </header>
 
 <main id="top">
+<div class="page-panel" data-page="about">
 <section class="v11-shell v11-hero">
   <aside class="v11-profile-card">
     <div class="v11-avatar"><span>KM</span><i></i></div>
@@ -76,8 +78,9 @@
     <p>I prefer practical security: a control should have an owner, an objective, evidence, a review rhythm and a clear path when it fails.</p>
   </div>
 </section>
+</div>
 
-<section id="resume" class="v11-section">
+<section id="resume" class="v11-section page-panel" data-page="resume">
   <div class="v11-heading"><small>RESUME</small><h2>Experience, education and career evidence.</h2></div>
   <div class="resume-grid">
     <div class="resume-column">
@@ -94,7 +97,7 @@
   <div class="resume-actions"><a class="v11-btn primary" href="resume.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-pdf"></i> Open Full Resume</a></div>
 </section>
 
-<section id="skills" class="v11-section">
+<section id="skills" class="v11-section page-panel" data-page="skills">
   <div class="v11-heading"><small>SKILL TAPS</small><h2>Tap a capability. See the security layer behind it.</h2><p>Interactive skill tabs keep the portfolio clean while letting recruiters drill into the capability areas that matter.</p></div>
   <div class="skill-tabs" role="tablist" aria-label="Cybersecurity skills">
     <button class="skill-tab active" role="tab" aria-selected="true" aria-controls="skill-gov" data-skill="skill-gov"><i class="fa-solid fa-shield-halved"></i><span>GRC / ISMS</span></button>
@@ -114,7 +117,7 @@
   </div>
 </section>
 
-<section id="credentials" class="v11-section">
+<section id="credentials" class="v11-section page-panel" data-page="credentials">
   <div class="v11-heading"><small>CREDENTIAL VAULT</small><h2>Credentials you can actually open.</h2><p>Drop your real certificate PDFs/images into <code>assets/certificates/</code>. Each card is wired to open the evidence.</p></div>
   <div class="vault-grid">
     <article class="vault-card" data-cert="assets/certificates/ceh.pdf"><div class="vault-icon"><i class="fa-solid fa-user-secret"></i></div><span>EC-COUNCIL</span><h3>Certified Ethical Hacker</h3><small>CEH</small><button class="view-cert">VIEW CERTIFICATE</button></article>
@@ -130,7 +133,7 @@
   </div>
 </section>
 
-<section id="projects" class="v11-section">
+<section id="projects" class="v11-section page-panel" data-page="projects">
   <div class="v11-heading"><small>PROJECTS</small><h2>Work mapped to security outcomes — not generic project cards.</h2></div>
   <div class="project-grid">
     <article class="project-v11"><span>01 / GRC</span><h3>Fintech Information Security Risk Assessment & GRC Gap Analysis</h3><p>Risk registers, asset inventories, risk scoring, control-effectiveness assessment, GRC gap analysis and remediation roadmaps aligned to business risk and cyber resilience.</p><div class="project-chain"><i>ASSET</i><b>→</b><i>THREAT</i><b>→</b><i>RISK</i><b>→</b><i>CONTROL</i><b>→</b><i>TREATMENT</i></div><button class="project-cert-link" data-cert="assets/certificates/project-risk-assessment.pdf">VIEW PROJECT EVIDENCE</button></article>
@@ -140,13 +143,36 @@
   </div>
 </section>
 
-<section id="forum" class="v11-section forum-teaser">
-  <div class="v11-heading"><small>FORUM</small><h2>Turn the portfolio into a security conversation.</h2><p>Discuss GRC, ISO 27001, PCI DSS, VAPT, SOC, SIEM, incident response, AI security and GCC career topics.</p></div>
-  <div class="forum-teaser-card"><div><span>COMMUNITY CHANNEL</span><h3>Practical security discussions — not just a contact page.</h3><p>Open the dedicated forum to browse topics or start a discussion through the portfolio's GitHub Discussions space.</p></div><div class="contact-actions"><a class="v11-btn primary" href="forum.html"><i class="fa-solid fa-comments"></i> Open Forum</a><a class="v11-btn" href="https://github.com/Karthikmani24/Portfolio_Karthikeyan-M/discussions" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Discussions</a></div></div>
+<section id="recruiters" class="v11-section page-panel" data-page="recruiters">
+  <div class="v11-heading"><small>CAREER CONNECT</small><h2>Recruiter Connect — built for GCC visibility.</h2><p>Tap a channel to open the recruiter platform. Replace the platform URLs later with your exact public profile links for a direct recruiter handoff.</p></div>
+  <div class="recruiter-v11-panel">
+    <div class="recruiter-v11-head"><div><span>RECRUITER NETWORK</span><h3>Seven channels. One security profile.</h3></div><div class="recruiter-live"><i></i> OPEN TO GCC / INTERNATIONAL</div></div>
+    <div class="recruiter-tabs-v11">
+      <a class="recruiter-tab-v11" href="https://www.linkedin.com/" target="_blank" rel="noopener"><span>in</span><b>LinkedIn</b><small>Professional Network</small></a>
+      <a class="recruiter-tab-v11" href="https://www.bayt.com/" target="_blank" rel="noopener"><span>BY</span><b>Bayt</b><small>GCC Recruitment</small></a>
+      <a class="recruiter-tab-v11" href="https://www.gulftalent.com/" target="_blank" rel="noopener"><span>GT</span><b>GulfTalent</b><small>Gulf Professionals</small></a>
+      <a class="recruiter-tab-v11" href="https://www.naukrigulf.com/" target="_blank" rel="noopener"><span>NG</span><b>Naukri Gulf</b><small>GCC Jobs</small></a>
+      <a class="recruiter-tab-v11" href="https://www.naukri.com/" target="_blank" rel="noopener"><span>NK</span><b>Naukri</b><small>India / Global</small></a>
+      <a class="recruiter-tab-v11" href="https://gulfcareers.com/" target="_blank" rel="noopener"><span>GC</span><b>Gulf Careers</b><small>GCC Opportunities</small></a>
+      <a class="recruiter-tab-v11" href="https://www.gulfjobs.com/" target="_blank" rel="noopener"><span>GJ</span><b>GulfJobs</b><small>Gulf Opportunities</small></a>
+    </div>
+    <div class="recruiter-preview-v11"><i class="preview-pulse"></i><div><small>PROFILE POSITIONING</small><h4>Cybersecurity • GRC • ISMS • Compliance • Security Operations</h4><p>Targeting Cybersecurity Manager, GRC Manager, Information Security Manager, Security Governance and Security Operations leadership roles.</p></div></div>
+  </div>
 </section>
 
-<section id="contact" class="v11-section">
-  <div class="v11-heading"><small>CONTACT</small><h2>Let's connect for security, GRC and leadership opportunities.</h2></div>
+<section id="forum" class="v11-section page-panel" data-page="forum">
+  <div class="v11-heading"><small>FORUM / COMMUNITY</small><h2>Security conversations beyond the resume.</h2><p>Practical discussion around GRC, ISO 27001, PCI DSS, VAPT, SOC, SIEM, incident response, AI security and GCC career growth.</p></div>
+  <div class="forum-teaser-card"><div><span>COMMUNITY CHANNEL</span><h3>THREAT → DISCUSS → LEARN → CONTROL</h3><p>Use the forum as the conversation layer of the portfolio. Topics are hosted through GitHub Discussions.</p></div><div class="contact-actions"><a class="v11-btn primary" href="forum.html"><i class="fa-solid fa-comments"></i> Open Forum Hub</a><a class="v11-btn" href="https://github.com/Karthikmani24/Portfolio_Karthikeyan-M/discussions" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Discussions</a></div></div>
+  <div class="forum-topic-grid forum-topic-grid-main">
+    <a href="https://github.com/Karthikmani24/Portfolio_Karthikeyan-M/discussions" target="_blank" rel="noopener" class="forum-topic"><i class="fa-solid fa-shield-halved"></i><b>GRC & ISMS</b><span>Governance, controls, risk and evidence.</span></a>
+    <a href="https://github.com/Karthikmani24/Portfolio_Karthikeyan-M/discussions" target="_blank" rel="noopener" class="forum-topic"><i class="fa-solid fa-file-shield"></i><b>ISO 27001</b><span>Clauses, Annex A, SoA and audit practice.</span></a>
+    <a href="https://github.com/Karthikmani24/Portfolio_Karthikeyan-M/discussions" target="_blank" rel="noopener" class="forum-topic"><i class="fa-solid fa-tower-broadcast"></i><b>SOC / SIEM</b><span>Monitoring, detection and operational security.</span></a>
+    <a href="https://github.com/Karthikmani24/Portfolio_Karthikeyan-M/discussions" target="_blank" rel="noopener" class="forum-topic"><i class="fa-solid fa-briefcase"></i><b>GCC Careers</b><span>Roles, interviews, skills and growth.</span></a>
+  </div>
+</section>
+
+<section id="contact" class="v11-section page-panel" data-page="contact">
+  <div class="v11-heading"><small>CONTACT / CONNECT</small><h2>Connect when the opportunity is right.</h2><p>Email and phone stay hidden until you choose to reveal them.</p></div>
   <div class="contact-v11">
     <p>Open to GCC and international opportunities across cybersecurity, GRC, compliance, information security and security operations.</p>
     <div class="contact-actions">
