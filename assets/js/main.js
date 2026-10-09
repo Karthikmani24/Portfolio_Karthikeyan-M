@@ -9,7 +9,7 @@ function showPage(page,updateHash=true){
   if(!pageTitles[page]) page="about";
   pagePanels.forEach(panel=>panel.classList.toggle("page-active",panel.dataset.page===page));
   pageLinks.forEach(link=>link.classList.toggle("active",link.dataset.pageLink===page));
-  document.title=`Karthikeyan M | ${pageTitles[page]} • Cybersecurity`;
+  document.title=`KM Portfolio | ${pageTitles[page]} • Cybersecurity`;
   if(updateHash && location.hash!==`#${page}`) history.replaceState(null,"",`#${page}`);
   window.scrollTo({top:0,behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
   nav?.classList.remove("open");
