@@ -517,3 +517,56 @@ body{
   .skill-tab span{font-size:12px!important}
   .project-v11 h3,.vault-card h3{font-size:20px!important}
 }
+
+
+/* V12.2 contrast repair: keep Skills and Recruiter Connect panels in the same dark cyber family */
+.skill-tab,
+.skill-tabs .skill-tab {
+  background: linear-gradient(145deg, rgba(35,37,66,.98), rgba(45,34,65,.98)) !important;
+  color: #E9EAF8 !important;
+  border-color: rgba(99,200,242,.30) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.035), 0 8px 20px rgba(4,7,22,.18) !important;
+}
+.skill-tab i { color: #63C8F2 !important; }
+.skill-tab:hover { background: linear-gradient(135deg, rgba(52,73,112,.98), rgba(79,44,91,.98)) !important; }
+.skill-tab.active {
+  background: linear-gradient(120deg, #287FB8, #7254B8 58%, #702B50) !important;
+  color: #FFFFFF !important;
+  border-color: rgba(197,138,88,.72) !important;
+}
+.skill-tab.active i { color: #A6E9FF !important; }
+.skill-panel {
+  background: linear-gradient(135deg, rgba(31,35,61,.99), rgba(45,31,57,.99) 58%, rgba(43,34,68,.99)) !important;
+  border-color: rgba(99,200,242,.34) !important;
+  box-shadow: 0 18px 44px rgba(3,6,20,.28), inset 0 1px 0 rgba(255,255,255,.035) !important;
+  color: #F5F3FF !important;
+}
+.skill-panel h3 { color: #F5F3FF !important; }
+.skill-panel p { color: #C8D3E5 !important; }
+.skill-panel small { color: #79DFFF !important; }
+.skill-panel-icon { background: linear-gradient(135deg, rgba(59,157,232,.22), rgba(134,99,215,.24), rgba(112,43,80,.24)) !important; color: #82DFFF !important; border-color: rgba(99,200,242,.35) !important; }
+.skill-pills b { color: #F1ECFF !important; background: rgba(13,16,36,.76) !important; border-color: rgba(99,200,242,.26) !important; }
+.recruiter-v11-panel {
+  background: linear-gradient(145deg, rgba(29,32,57,.99), rgba(48,31,58,.99) 58%, rgba(33,39,68,.99)) !important;
+  border-color: rgba(99,200,242,.32) !important;
+  box-shadow: 0 18px 44px rgba(3,6,20,.30), inset 0 1px 0 rgba(255,255,255,.035) !important;
+}
+.recruiter-v11-head h3 { color: #F5F3FF !important; }
+.recruiter-v11-head>div:first-child>span, .recruiter-preview-v11 small { color: #7CDFFF !important; }
+.recruiter-live { background: rgba(13,18,38,.86) !important; color: #E8ECF8 !important; border-color: rgba(99,200,242,.28) !important; }
+.recruiter-tab-v11 {
+  background: linear-gradient(140deg, rgba(36,41,70,.98), rgba(50,36,67,.98)) !important;
+  border-color: rgba(99,200,242,.25) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.025) !important;
+}
+.recruiter-tab-v11:hover { background: linear-gradient(135deg, rgba(45,74,110,.98), rgba(82,42,78,.98)) !important; border-color: rgba(197,138,88,.60) !important; }
+.recruiter-tab-v11 b { color: #F2F4FF !important; }
+.recruiter-tab-v11 small { color: #C1C9DD !important; }
+.recruiter-preview-v11 { background: rgba(13,18,38,.82) !important; border-color: rgba(99,200,242,.24) !important; }
+.recruiter-preview-v11 h4 { color: #F2F4FF !important; }
+.recruiter-preview-v11 p { color: #C8D3E5 !important; }
+@media (max-width: 700px) {
+  .skill-tab, .skill-tabs .skill-tab { background: linear-gradient(145deg, rgba(35,37,66,.98), rgba(45,34,65,.98)) !important; }
+  .skill-tab.active { background: linear-gradient(120deg, #287FB8, #7254B8 58%, #702B50) !important; }
+  .recruiter-tab-v11 { background: linear-gradient(140deg, rgba(36,41,70,.98), rgba(50,36,67,.98)) !important; }
+}
