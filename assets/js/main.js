@@ -24,7 +24,7 @@ function openEvidence(path){
  if(!modal||!viewer)return;
  const clean=path.replace(/^\.\//,""); pathLabel.textContent=clean; viewer.innerHTML="";
  const ext=clean.split(".").pop().toLowerCase();
- if(ext==="pdf"){const frame=document.createElement("iframe");frame.src="./"+clean;frame.title="Certificate evidence";viewer.appendChild(frame)}
+ if(ext==="pdf"){const frame=document.createElement("iframe");frame.src="./"+clean+"#toolbar=1&navpanes=0&view=Fit";frame.title="Certificate or project report";frame.setAttribute("loading","eager");frame.setAttribute("allowfullscreen","true");viewer.appendChild(frame)}
  else if(["png","jpg","jpeg","webp"].includes(ext)){const im=document.createElement("img");im.src="./"+clean;im.alt="Certificate evidence";viewer.appendChild(im)}
  else viewer.innerHTML='<div style="padding:30px;color:#B9C6D8">Certificate file not found or unsupported. Add the real PDF/image under assets/certificates/.</div>';
  modal.classList.add("open");modal.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";
