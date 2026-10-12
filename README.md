@@ -63,3 +63,11 @@ Medium-intensity purple + technology blue + burgundy + cyber red + copper theme,
 - Added subtle cybersecurity-themed micro-animations with reduced motion on mobile.
 - Repository: https://github.com/Karthikmani24/Portfolio_Karthikeyan-M/
 - Live URL: https://karthikmani24.github.io/Portfolio_Karthikeyan-M/
+
+
+## V13.1 — Profile links, contact and certificates
+- Recruiter Connect cards now use the user-provided LinkedIn, Bayt, GulfTalent, Naukri Gulf, Naukri, Gulf Careers and GulfJobs URLs.
+- Contact reveal controls use the provided email and phone number.
+- Added the supplied certificate PDFs from `PDF.zip` under `assets/certificates/` and connected the matching Credential Vault cards.
+- Added Ethical Hacking, OSINT/Dark Web and AI prompting certificate cards.
+- Note: some supplied job-board URLs are account/dashboard routes and may require login; public profile URLs are preferable for recruiter access.
