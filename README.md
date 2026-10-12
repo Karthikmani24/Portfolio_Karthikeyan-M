@@ -1,73 +1,31 @@
-# Karthikeyan M — V12.1 Cybersecurity Portfolio
+# KM Portfolio — V14
 
-V12.1 is a tab-first, recruiter-oriented cybersecurity portfolio for GitHub Pages.
+V14 fixes the credential/project evidence viewer, improves Resume text contrast, slightly lightens the cyber theme, animates the KM identity mark, and adds project cards based on the reports supplied by the portfolio owner.
 
-## What changed
-- About / Resume / Skills / Credentials / Projects / Recruiter Connect / Forum / Contact are separate visible views.
-- Clicking a navigation tab hides every other portfolio view.
-- Skills retain interactive capability taps.
-- Credentials open real PDF/image evidence when the matching file is uploaded.
-- Projects have evidence slots using the same viewer.
-- Email and phone remain hidden until the visitor clicks Reveal Email / Reveal Phone.
-- Recruiter Connect includes LinkedIn, Bayt, GulfTalent, Naukri Gulf, Naukri, Gulf Careers and GulfJobs.
-- Typography follows V10: **Inter** for body copy and **Space Grotesk** for headings/identity.
-- KM identity uses burgundy + copper + warm ivory instead of the previous blue-heavy mark.
-- Forum is available as a portfolio tab plus a dedicated `forum.html` hub.
+## Main updates
+- Certificate and PDF evidence viewer now uses the full modal height with responsive desktop/mobile sizing.
+- Resume headings, tags and descriptions are larger and more legible.
+- KM monogram has a subtle orbit, shimmer and float effect.
+- Theme is very slightly lighter while retaining purple, technology blue, burgundy, cyber red and copper.
+- Projects tab includes CISSP Practical Security Workbook, CEH Capstone, and the three-track cybersecurity portfolio guide, alongside existing GRC/SIEM/ISMS/incident-response projects.
+- Detailed reports open in the portfolio viewer and source documents can be downloaded where provided.
 
-## Certificate upload
-Place real certificates in `assets/certificates/` and keep the filenames used by `index.html`. Do not publish confidential evidence, customer information, private audit material or sensitive security data.
+## Project report assets
+- `assets/projects/cissp-practical-security-workbook.pdf` and `.docx`
+- `assets/projects/ceh-capstone-project.pdf` and `.docx`
+- `assets/projects/three-track-cybersecurity-portfolio-guide.pdf`
 
-## Contact privacy
-Replace `YOUR_EMAIL_HERE` and `YOUR_PHONE_HERE` in `index.html` only when ready. The interface reveals them only after a click, but a static GitHub Pages site cannot keep those values secret from source inspection.
+The CISSP report uses a fictional SecurePay Solutions scenario and states that reference evidence images are examples, not production execution claims. The CEH capstone asks for lab screenshots where applicable; add genuine lab screenshots before representing those exercises as personally executed. The three-track guide describes a red-team AD lab, a blue-team SOC lab, and a GRC risk assessment; it is presented as a guide rather than a claim that every lab was completed.
 
-## Deploy
-Push the repository to GitHub, enable **Settings → Pages → Source: GitHub Actions**, and push to the default branch. The included workflow deploys the static site.
+## Deployment
+Use the existing repository:
+`https://github.com/Karthikmani24/Portfolio_Karthikeyan-M/`
 
-GitHub Pages is a static hosting service; server-side PHP/Python is not supported. See the official GitHub Pages documentation for current deployment details.
+1. Extract the V14 ZIP.
+2. Copy the extracted files into the repository root, replacing the previous files.
+3. Commit and push to `main`.
+4. In GitHub Settings → Pages, confirm GitHub Actions is selected.
+5. Verify the Pages workflow under Actions.
+6. Test the credential viewer, project report viewer, resume readability and mobile layout.
 
-
-## Repository identity (fixed)
-- GitHub repository: https://github.com/Karthikmani24/Portfolio_Karthikeyan-M/
-- Expected GitHub Pages URL: https://karthikmani24.github.io/Portfolio_Karthikeyan-M/
-- Important: the repository name contains an underscore (`Portfolio_Karthikeyan-M`), not a hyphen (`Portfolio-Karthikeyan-M`).
-- All repository/discussion/sitemap references in this package use the exact repository name.
-
-
-V12.1: Light Technology Blue theme, stable mobile sticky tab rail, mobile flicker fixes, and professional cybersecurity micro-animations.
-
-Repository: https://github.com/Karthikmani24/Portfolio_Karthikeyan-M/
-Pages: https://karthikmani24.github.io/Portfolio_Karthikeyan-M/
-
-
-## V12.1 Theme
-Medium-intensity purple + technology blue + burgundy + cyber red + copper theme, with mobile-safe cybersecurity animations.
-
-
-## V12.1 update
-- Darker medium cyber palette: purple, technology blue, burgundy, cyber red and copper.
-- Mobile tabs forced into a horizontal swipeable rail.
-- Skill and project typography enlarged for readability.
-- Existing repository: `Karthikmani24/Portfolio_Karthikeyan-M`.
-
-
-## V12.2 fixes
-- Skills tab buttons and capability panels use dark cyber backgrounds with high-contrast readable text.
-- Recruiter Connect container, recruiter cards and profile-positioning panel use matching dark backgrounds.
-- Removed the standalone GitHub button from Contact/Connect; Forum discussions links remain available in the Forum section.
-
-
-## V13 — KM Portfolio
-- Brand/title: **KM Portfolio** across the browser title and visible header.
-- Main page includes a third-party visitor badge for total page-load views. It increments on loads and refreshes, so it represents views/hits rather than deduplicated unique people.
-- Focus / Operations / Leadership cards use high-contrast text.
-- Added subtle cybersecurity-themed micro-animations with reduced motion on mobile.
-- Repository: https://github.com/Karthikmani24/Portfolio_Karthikeyan-M/
-- Live URL: https://karthikmani24.github.io/Portfolio_Karthikeyan-M/
-
-
-## V13.1 — Profile links, contact and certificates
-- Recruiter Connect cards now use the user-provided LinkedIn, Bayt, GulfTalent, Naukri Gulf, Naukri, Gulf Careers and GulfJobs URLs.
-- Contact reveal controls use the provided email and phone number.
-- Added the supplied certificate PDFs from `PDF.zip` under `assets/certificates/` and connected the matching Credential Vault cards.
-- Added Ethical Hacking, OSINT/Dark Web and AI prompting certificate cards.
-- Note: some supplied job-board URLs are account/dashboard routes and may require login; public profile URLs are preferable for recruiter access.
+Live URL: `https://karthikmani24.github.io/Portfolio_Karthikeyan-M/`
