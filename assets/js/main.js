@@ -22,9 +22,9 @@ showPage(location.hash.slice(1)||"about",false);
 const modal=document.getElementById("certModal"),viewer=document.getElementById("certViewer"),pathLabel=document.getElementById("modalPath"),close=document.getElementById("modalClose");
 function openEvidence(path){
  if(!modal||!viewer)return;
- const clean=path.replace(/^\.\//,""); pathLabel.textContent=clean; viewer.innerHTML="";
+ const clean=path.replace(/^\.\//,""); if(pathLabel) pathLabel.textContent=""; viewer.innerHTML="";
  const ext=clean.split(".").pop().toLowerCase();
- if(ext==="pdf"){const frame=document.createElement("iframe");frame.src="./"+clean+"#toolbar=1&navpanes=0&view=Fit";frame.title="Certificate or project report";frame.setAttribute("loading","eager");frame.setAttribute("allowfullscreen","true");viewer.appendChild(frame)}
+ if(ext==="pdf"){const frame=document.createElement("iframe");frame.src="./"+clean+"#toolbar=0&navpanes=0&scrollbar=1&view=FitH";frame.title="Certificate or project report";frame.setAttribute("loading","eager");frame.setAttribute("allowfullscreen","true");viewer.appendChild(frame)}
  else if(["png","jpg","jpeg","webp"].includes(ext)){const im=document.createElement("img");im.src="./"+clean;im.alt="Certificate evidence";viewer.appendChild(im)}
  else viewer.innerHTML='<div style="padding:30px;color:#B9C6D8">Certificate file not found or unsupported. Add the real PDF/image under assets/certificates/.</div>';
  modal.classList.add("open");modal.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";
@@ -39,7 +39,18 @@ skillTabs.forEach(tab=>tab.addEventListener('click',()=>{const id=tab.dataset.sk
 
 // Click-to-reveal contact details. Replace placeholders in index.html with your real values.
 const revealStatus=document.getElementById('contactRevealStatus');
-document.querySelectorAll('.contact-reveal').forEach(btn=>btn.addEventListener('click',()=>{const kind=btn.dataset.kind,value=btn.dataset.value;if(!revealStatus)return;if(!value||value.startsWith('YOUR_')){revealStatus.textContent=`Add your ${kind} in the data-value field in index.html.`;return}revealStatus.innerHTML='';const link=document.createElement('a');link.textContent=value;link.href=kind==='email'?`mailto:${value}`:`tel:${value.replace(/[^+\d]/g,'')}`;revealStatus.appendChild(link);btn.querySelector('span').textContent=`${kind==='email'?'Email':'Phone'} Revealed`}));
+document.querySelectorAll('.contact-reveal').forEach(btn=>btn.addEventListener('click',()=>{
+ const kind=btn.dataset.kind,value=btn.dataset.value;if(!revealStatus)return;
+ if(btn.dataset.revealed==='true'){
+  btn.dataset.revealed='false';btn.querySelector('span').textContent=kind==='email'?'Reveal Email':'Reveal Phone';
+  revealStatus.querySelector(`[data-reveal-kind="${kind}"]`)?.remove();
+  if(!revealStatus.querySelector('a[data-reveal-kind]')) revealStatus.innerHTML='';return;
+ }
+ if(!value||value.startsWith('YOUR_')){revealStatus.textContent=`Add your ${kind} in the data-value field in index.html.`;return;}
+ btn.dataset.revealed='true';btn.querySelector('span').textContent=`Hide ${kind==='email'?'Email':'Phone'}`;
+ const link=document.createElement('a');link.dataset.revealKind=kind;link.textContent=value;
+ link.href=kind==='email'?`mailto:${value}`:`tel:${value.replace(/[^+\d]/g,'')}`;revealStatus.appendChild(link);
+}));
 
 const reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 if(!reduced){const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.style.setProperty("--seen","1");io.unobserve(x.target)}}),{threshold:.12});document.querySelectorAll(".page-panel,.vault-card,.project-v11,.timeline-card,.skill-matrix article,.recruiter-tab-v11").forEach(x=>io.observe(x));}
