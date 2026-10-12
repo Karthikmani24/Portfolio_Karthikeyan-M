@@ -29,3 +29,13 @@ Use the existing repository:
 6. Test the credential viewer, project report viewer, resume readability and mobile layout.
 
 Live URL: `https://karthikmani24.github.io/Portfolio_Karthikeyan-M/`
+
+## V15 update
+- Certificate viewer requests `#toolbar=0`; browser support varies.
+- Internal file paths and credential helper copy are hidden/removed.
+- Project download buttons removed; reports open in the portfolio viewer.
+- Five project reports added from the supplied ZIPs.
+- Forum contrast and font sizes improved.
+- Contact reveal toggles can hide again.
+- KM icon gets cyber scan/orbit animations; background slightly lighter.
+- Static GitHub Pages source cannot be hidden from browser inspection.
