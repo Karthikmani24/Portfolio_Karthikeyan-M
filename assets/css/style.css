@@ -853,3 +853,42 @@ body{background-color:#2A2B49;background-image:radial-gradient(ellipse at 14% 12
 @keyframes defenseDetect{0%,26%{opacity:1}27%,100%{opacity:0}}@keyframes defenseAnalyse{0%,27%,57%{opacity:0}32%,56%{opacity:1}58%,100%{opacity:0}}@keyframes defenseSecure{0%,61%{opacity:0}66%,93%{opacity:1}100%{opacity:0}}
 @media(max-width:700px){.v18-cyber-defense{min-height:215px!important}.defense-stage{max-width:235px}}
 @media(prefers-reduced-motion:reduce){.defense-grid,.defense-orbit,.defense-shield,.defense-packet,.defense-pulse,.shield-check,.defense-lock,.defense-stage-detect,.defense-stage-analyse,.defense-stage-secure{animation:none!important}.defense-stage-secure,.shield-check,.defense-lock{opacity:1!important}.defense-stage-detect,.defense-stage-analyse{opacity:0!important}}
+
+/* V19 — brighter plum/blue cyber palette and compact playful pixel-pet animation */
+:root{--v19-ink:#20233F;--v19-plum:#554274;--v19-blue:#4A91C7;--v19-burgundy:#873D68;--v19-copper:#C78363}
+body{
+ background-color:#30304F!important;
+ background-image:
+  radial-gradient(ellipse at 10% 12%,rgba(151,112,213,.30),transparent 36%),
+  radial-gradient(ellipse at 88% 22%,rgba(78,174,226,.24),transparent 38%),
+  radial-gradient(ellipse at 60% 88%,rgba(177,78,122,.21),transparent 42%),
+  linear-gradient(135deg,rgba(64,53,98,.24),rgba(36,43,72,.12))!important;
+}
+.v11-grid{opacity:.4!important}.v11-noise{opacity:.06!important}
+.v19-pixel-pet{box-sizing:border-box;width:100%;min-height:0!important;height:auto!important;overflow:hidden;margin:14px 0 0!important;padding:12px 6px 10px!important;border-top:1px solid rgba(143,190,232,.24);position:relative}
+.pet-playground{height:118px;max-width:235px;width:100%;margin:0 auto;position:relative;overflow:hidden;border-radius:18px;background:linear-gradient(140deg,rgba(79,103,157,.25),rgba(121,76,135,.22));border:1px solid rgba(144,185,225,.18)}
+.pet-playground:before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(176,205,245,.24) 1px,transparent 1px);background-size:15px 15px;opacity:.55}
+.pet-star{position:absolute;color:#FFD39B;font-size:13px;animation:petTwinkle 2s ease-in-out infinite}.star-one{left:13%;top:18%}.star-two{right:12%;top:24%;animation-delay:.7s}
+.packet-runner{position:absolute;left:10%;top:47%;width:17px;height:17px;border-radius:5px;background:linear-gradient(135deg,#FF7D9D,#C64F75);box-shadow:0 0 13px rgba(255,100,150,.55);z-index:3;animation:packetZoom 5.8s ease-in-out infinite}
+.packet-runner span{position:absolute;width:4px;height:4px;background:#FFF;border-radius:50%;left:4px;top:4px}.packet-runner i{position:absolute;width:7px;height:2px;background:#FFE4EE;right:2px;bottom:3px;transform:rotate(-20deg)}
+.km-pet{position:absolute;z-index:4;width:48px;height:47px;left:47%;top:29%;border-radius:16px 16px 18px 18px;background:linear-gradient(140deg,#9A79EA 0%,#7756B0 48%,#B66F77 100%);border:1px solid rgba(255,228,255,.72);box-shadow:inset 0 2px 4px rgba(255,255,255,.25),0 4px 13px rgba(22,20,52,.23);animation:petHop 5.8s ease-in-out infinite}
+.pet-antenna{position:absolute;left:22px;top:-9px;width:2px;height:9px;background:#8EE9FF}.pet-antenna:after{content:"";position:absolute;left:-3px;top:-3px;width:7px;height:7px;border-radius:50%;background:#8EE9FF;box-shadow:0 0 8px #8EE9FF}
+.pet-eye{position:absolute;top:15px;width:5px;height:6px;border-radius:50%;background:#F7FDFF;box-shadow:0 0 4px rgba(255,255,255,.6)}.eye-left{left:11px}.eye-right{right:11px}
+.pet-cheek{position:absolute;top:25px;width:6px;height:3px;border-radius:50%;background:#FF9FB8;opacity:.85}.cheek-left{left:6px}.cheek-right{right:6px}
+.pet-mouth{position:absolute;left:20px;top:25px;width:8px;height:5px;border-bottom:2px solid #FFF0FA;border-radius:0 0 9px 9px}
+.pet-arm{position:absolute;top:25px;width:12px;height:5px;border-radius:6px;background:#8DE6FF;transform-origin:left center}.arm-left{left:-5px;transform:rotate(25deg);animation:petWave .7s ease-in-out infinite alternate}.arm-right{right:-7px;transform:rotate(-25deg);animation:petWave .7s ease-in-out infinite alternate-reverse}
+.pet-feet{position:absolute;bottom:-3px;left:11px;width:8px;height:6px;border-radius:3px;background:#D3B6FF;box-shadow:16px 0 0 #D3B6FF}
+.pet-net{position:absolute;left:10%;top:20%;width:80%;height:67%;border:1px dashed rgba(132,224,255,.65);border-radius:50%;opacity:0;transform:scale(.4);z-index:5;animation:petNet 5.8s ease-in-out infinite}.pet-net span{position:absolute;right:7%;top:0;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#7CF0C0;color:#16473F;font-size:15px;font-weight:900;box-shadow:0 0 12px rgba(124,240,192,.55)}
+.pet-confetti{position:absolute;z-index:6;color:#8DF1C8;opacity:0;font-size:17px;animation:petConfetti 5.8s ease-in-out infinite}.confetti-one{left:25%;top:24%}.confetti-two{right:25%;top:24%;animation-delay:.12s}
+.pet-status{position:relative;min-height:16px;margin:7px 0 0;text-align:center;font:700 8px/1.55 'Orbitron',sans-serif;letter-spacing:.045em;overflow:hidden}
+.pet-status span{position:absolute;left:0;right:0;top:0;opacity:0;white-space:normal}
+.pet-status-scan{color:#FFB2C4;animation:petStatusScan 5.8s linear infinite}.pet-status-chase{color:#A7E9FF;animation:petStatusChase 5.8s linear infinite}.pet-status-win{color:#8AF0C5;animation:petStatusWin 5.8s linear infinite}
+.v19-pixel-pet .mascot-caption{font-size:7px!important;line-height:1.5!important;letter-spacing:.07em;color:#C4D1E8;margin:7px 0 0!important;white-space:normal!important}
+@keyframes packetZoom{0%,5%{left:8%;top:47%;transform:rotate(0)}22%{left:25%;top:27%;transform:rotate(35deg)}38%{left:64%;top:58%;transform:rotate(-25deg)}47%,57%{left:74%;top:44%;transform:rotate(0) scale(.9)}64%,100%{left:74%;top:44%;transform:scale(.1);opacity:0}}
+@keyframes petHop{0%,7%{left:47%;top:29%;transform:translateY(0) rotate(0)}18%{left:28%;top:26%;transform:translateY(-8px) rotate(-10deg)}32%{left:40%;top:34%;transform:translateY(-3px) rotate(8deg)}44%,55%{left:63%;top:30%;transform:translateY(-7px) rotate(0)}63%,100%{left:63%;top:30%;transform:translateY(0) rotate(0)}}
+@keyframes petNet{0%,49%{opacity:0;transform:scale(.4)}56%,70%{opacity:1;transform:scale(1)}77%,100%{opacity:0;transform:scale(1.15)}}
+@keyframes petConfetti{0%,60%{opacity:0;transform:translateY(6px) scale(.3) rotate(0)}67%,78%{opacity:1;transform:translateY(-5px) scale(1) rotate(35deg)}88%,100%{opacity:0;transform:translateY(-10px) scale(.5) rotate(80deg)}}
+@keyframes petStatusScan{0%,27%{opacity:1}28%,100%{opacity:0}}@keyframes petStatusChase{0%,28%,55%{opacity:0}32%,54%{opacity:1}56%,100%{opacity:0}}@keyframes petStatusWin{0%,62%{opacity:0}67%,91%{opacity:1}100%{opacity:0}}
+@keyframes petWave{from{transform:rotate(-35deg)}to{transform:rotate(35deg)}}@keyframes petTwinkle{0%,100%{opacity:.45;transform:scale(.8)}50%{opacity:1;transform:scale(1.25)}}
+@media(max-width:700px){.v19-pixel-pet{min-height:0!important;height:auto!important;padding-bottom:10px!important}.pet-playground{height:112px}.pet-status{min-height:18px}.v19-pixel-pet .mascot-caption{font-size:7px!important}}
+@media(prefers-reduced-motion:reduce){.pet-star,.packet-runner,.km-pet,.pet-arm,.pet-net,.pet-confetti,.pet-status-scan,.pet-status-chase,.pet-status-win{animation:none!important}.pet-status-win{opacity:1!important}.pet-net{opacity:.65;transform:none}.packet-runner{opacity:0}}
