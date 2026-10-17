@@ -1096,3 +1096,86 @@ body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;bac
 @keyframes kmIconFrame{to{transform:rotate(405deg)}}@keyframes kmIconOrbit{to{transform:rotate(332deg)}}@keyframes kmShieldFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}@keyframes kmShieldScan{0%,100%{top:22%;opacity:.25}50%{top:70%;opacity:1}}@keyframes kmIconNode{0%,100%{opacity:.45;transform:scale(.8)}50%{opacity:1;transform:scale(1.25)}}
 @media(max-width:700px){.v11-avatar.v21-icon-refresh{width:108px!important;height:108px!important}.icon-shield{width:66px;height:74px}.icon-orbit{width:83px;height:37px}.icon-orbit-two{width:93px;height:42px}}
 @media(prefers-reduced-motion:reduce){.v11-avatar.v21-icon-refresh:before,.v11-avatar.v21-icon-refresh:after,.icon-orbit,.icon-shield,.icon-shield-scan,.icon-node{animation:none!important}}
+
+
+/* V21 Control DNA clarity pass: stronger contrast, larger stages, animated signal */
+.v11-command{
+  position:relative!important;isolation:isolate!important;
+  min-height:116px!important;padding:16px 18px 15px!important;
+  border:1px solid rgba(105,200,242,.38)!important;border-radius:16px!important;
+  background:linear-gradient(110deg,rgba(38,52,88,.94),rgba(55,39,76,.95) 55%,rgba(77,37,61,.92))!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 12px 28px rgba(3,5,20,.22)!important;
+}
+.v11-command:before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;border-radius:inherit;
+  background:linear-gradient(110deg,transparent 0%,rgba(91,203,255,.08) 42%,rgba(190,118,168,.12) 50%,transparent 66%);
+  background-size:220% 100%;animation:dnaPanelSweep 7s ease-in-out infinite;
+}
+.command-head{
+  color:#EAF6FF!important;font-size:10px!important;line-height:1.5!important;
+  letter-spacing:.13em!important;align-items:center!important;gap:12px!important;
+}
+.command-head span{display:flex;align-items:center;gap:7px;color:#DDF4FF!important}
+.command-head i{color:#8DE4FF!important}
+.command-head small{font-size:8px!important;color:#F2C39B!important;text-align:right}
+.dna{
+  position:relative!important;display:flex!important;align-items:center!important;
+  justify-content:center!important;flex-wrap:wrap!important;gap:8px!important;
+  margin-top:15px!important;padding:2px 0!important;
+}
+.dna-node{
+  position:relative!important;z-index:2!important;display:inline-flex!important;
+  align-items:center!important;justify-content:center!important;
+  min-width:62px!important;min-height:31px!important;box-sizing:border-box!important;
+  padding:8px 11px!important;border-radius:9px!important;
+  background:linear-gradient(145deg,rgba(21,27,51,.98),rgba(34,31,59,.98))!important;
+  border:1px solid rgba(130,203,244,.55)!important;color:#F4F7FF!important;
+  font:800 9px/1.2 "Space Grotesk",sans-serif!important;letter-spacing:.035em!important;
+  text-align:center!important;white-space:nowrap!important;
+  box-shadow:0 4px 12px rgba(3,5,20,.18),inset 0 1px 0 rgba(255,255,255,.04)!important;
+  animation:dnaNodePulse 3.8s ease-in-out infinite!important;
+}
+.dna-node.n1{border-color:rgba(255,116,145,.8)!important;color:#FFD8E0!important}
+.dna-node.n2{border-color:rgba(108,205,255,.75)!important;animation-delay:.45s!important}
+.dna-node.n3{border-color:rgba(224,166,111,.85)!important;color:#FFE5C8!important;animation-delay:.9s!important}
+.dna-node.n4{border-color:rgba(169,145,255,.8)!important;animation-delay:1.35s!important}
+.dna-node.n5{border-color:rgba(120,236,194,.8)!important;color:#C9FFEB!important;animation-delay:1.8s!important}
+.dna i{
+  position:relative!important;display:block!important;flex:0 0 14px!important;width:14px!important;
+  height:2px!important;margin:0!important;background:rgba(110,207,248,.45)!important;
+  border-radius:4px!important;overflow:visible!important;
+}
+.dna i:after{
+  content:"";position:absolute;top:-2px;left:0;right:auto;width:6px;height:6px;border-radius:50%;
+  background:#9CEBFF!important;box-shadow:0 0 9px #63C8F2!important;
+  animation:dnaSignalTravel 1.8s linear infinite!important;
+}
+.dna i:nth-of-type(2):after{animation-delay:.25s!important}.dna i:nth-of-type(3):after{animation-delay:.5s!important}.dna i:nth-of-type(4):after{animation-delay:.75s!important}
+.dna-explainer{
+  margin:11px 0 0!important;text-align:center!important;color:#D0D9EC!important;
+  font:500 11px/1.55 "Space Grotesk",sans-serif!important;letter-spacing:.005em!important;
+}
+.dna-explainer b{color:#8FE2FF!important;font-weight:800!important;padding:0 2px}
+@keyframes dnaPanelSweep{0%,100%{background-position:100% 0;opacity:.55}50%{background-position:0 0;opacity:1}}
+@keyframes dnaNodePulse{0%,100%{transform:translateY(0);box-shadow:0 4px 12px rgba(3,5,20,.18),0 0 0 rgba(99,200,242,0)}50%{transform:translateY(-2px);box-shadow:0 7px 18px rgba(3,5,20,.25),0 0 13px rgba(99,200,242,.11)}}
+@keyframes dnaSignalTravel{0%{left:0;opacity:.35}45%{opacity:1}100%{left:calc(100% - 6px);opacity:.4}}
+@media(max-width:700px){
+ .v11-command{min-height:0!important;padding:14px 12px 13px!important;margin-top:18px!important}
+ .command-head{font-size:9px!important;letter-spacing:.08em!important}
+ .command-head small{max-width:42%;font-size:7px!important;line-height:1.4!important}
+ .dna{gap:5px!important;margin-top:13px!important}
+ .dna-node{min-width:0!important;min-height:30px!important;padding:8px 9px!important;font-size:9px!important}
+ .dna i{flex-basis:9px!important;width:9px!important}
+ .dna-explainer{font-size:11px!important;line-height:1.6!important;margin-top:10px!important}
+}
+@media(max-width:390px){
+ .v11-command{padding:12px 9px!important}
+ .dna{gap:4px!important}
+ .dna-node{padding:7px 6px!important;font-size:8px!important}
+ .dna i{flex-basis:6px!important;width:6px!important}
+ .command-head small{font-size:6.5px!important}
+ .dna-explainer{font-size:10px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ .v11-command:before,.dna-node,.dna i:after{animation:none!important}
+}
