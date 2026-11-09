@@ -1179,3 +1179,15 @@ body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;bac
 @media(prefers-reduced-motion:reduce){
  .v11-command:before,.dna-node,.dna i:after{animation:none!important}
 }
+
+/* V22 — recruiter-first experience and education layout */
+.v22-resume-grid{grid-template-columns:minmax(0,1.65fr) minmax(260px,.9fr)!important;align-items:start!important;gap:20px!important}
+.v22-experience-column,.v22-education-column{min-width:0}
+.v22-role-card,.v22-education-card{position:relative!important;padding:17px 18px 16px 20px!important;margin-top:12px!important;border:1px solid rgba(110,174,218,.28)!important;background:linear-gradient(135deg,rgba(37,48,79,.72),rgba(30,28,57,.78))!important;box-shadow:0 8px 22px rgba(3,7,23,.12)!important;animation:none!important}
+.v22-role-card:before,.v22-education-card:before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:3px;border-radius:4px;background:linear-gradient(180deg,#69D7FF,#B77AD0,#C66B72)}
+.v22-role-card span,.v22-education-card span{display:block!important;font-size:9px!important;line-height:1.5!important;color:#9CE4FF!important;letter-spacing:.11em!important;margin-bottom:5px!important}
+.v22-role-card h4,.v22-education-card h4{color:#F0F3FF!important;font-size:clamp(16px,1.25vw,19px)!important;line-height:1.35!important;margin:5px 0 4px!important}
+.v22-org{display:block!important;color:#D1B8D8!important;font-size:12px!important;font-weight:700!important;line-height:1.55!important;margin:2px 0 7px!important}
+.v22-role-card p{color:#D0D9EA!important;font-size:13px!important;line-height:1.65!important;margin:6px 0 0!important}
+.v22-education-card p{margin:5px 0 0!important}
+@media(max-width:760px){.v22-resume-grid{grid-template-columns:1fr!important;gap:12px!important}.v22-role-card,.v22-education-card{padding:15px 14px 14px 17px!important}.v22-role-card h4,.v22-education-card h4{font-size:17px!important}.v22-role-card p{font-size:13px!important;line-height:1.65!important}.v22-org{font-size:11px!important}}
